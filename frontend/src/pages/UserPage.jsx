@@ -12,8 +12,8 @@ const UserPage = () => {
   return (
     <div className="user-page">
       <div className="header">
-        <h1>🎵 Sugerează o Melodie</h1>
-        <p>Ajută-ne să alegem cele mai bune piese pentru petrecere!</p>
+        <h1>🎵 Sugerează o melodie de suflet</h1>
+        <p>Sugereaza piesa betivaneeee</p>
       </div>
       
       <div className="container">

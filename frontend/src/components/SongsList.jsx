@@ -48,7 +48,7 @@ const SongsList = ({ refreshTrigger }) => {
 
   return (
     <div className="card">
-      <h2>Top 50 Melodii</h2>
+      <h2>Melodii blanaoooo</h2>
       {loading && <p style={styles.loading}>Încărcarea melodiilor...</p>}
       {error && <p style={styles.error}>{error}</p>}
       {!loading && songs.length === 0 && <p style={styles.empty}>Nicio melodie disponibilă. Sugerează una!</p>}

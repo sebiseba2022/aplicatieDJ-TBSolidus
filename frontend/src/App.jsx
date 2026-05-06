@@ -12,14 +12,14 @@ function App() {
           <div className="nav-container">
             <Link to="/user" className="logo-link">
               <img src="/logo-solidus.png" alt="Solidus Logo" className="logo-image" />
-              <span className="brand-name">Carousel Party</span>
+              <span className="brand-name">SOLIDUS CAROUSEL PARTY</span>
             </Link>
             <ul className="nav-links">
               <li>
                 <Link to="/user" className="nav-link">Sugestii</Link>
               </li>
               <li>
-                <Link to="/dj" className="nav-link">DJ Control</Link>
+               <Link to="/djadminpage" className="nav-link">DJ Control</Link>
               </li>
             </ul>
           </div>
@@ -27,7 +27,7 @@ function App() {
 
         <Routes>
           <Route path="/user" element={<UserPage />} />
-          <Route path="/dj" element={<DJPage />} />
+          <Route path="/djadminpage" element={<DJPage />} />
           <Route path="/" element={<Navigate to="/user" replace />} />
         </Routes>
       </div>
