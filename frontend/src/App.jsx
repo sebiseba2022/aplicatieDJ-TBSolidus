@@ -14,14 +14,6 @@ function App() {
               <img src="/logo-solidus.png" alt="Solidus Logo" className="logo-image" />
               <span className="brand-name">SOLIDUS CAROUSEL PARTY</span>
             </Link>
-            <ul className="nav-links">
-              <li>
-                <Link to="/user" className="nav-link">Sugestii</Link>
-              </li>
-              <li>
-               <Link to="/djadminpage" className="nav-link">DJ Control</Link>
-              </li>
-            </ul>
           </div>
         </nav>
 

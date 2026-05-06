@@ -1,15 +1,15 @@
 /* Solidus Theme - Navy Blue & White Design */
 
 :root {
-  --primary-color: #00205B;
-  --primary-dark: #001241;
-  --primary-light: #1a3a7a;
+  --primary-color: #ffffff;
+  --primary-dark: #020473;
+  --primary-light: #ffffff;
   --accent-color: #0066cc;
   --success-color: #28a745;
   --danger-color: #dc3545;
   --warning-color: #ffc107;
   --light-bg: #f8f9fa;
-  --white: #ffffff;
+  --white: #000000;
   --text-dark: #333333;
   --text-light: #666666;
   --border-color: #e0e0e0;
@@ -18,7 +18,7 @@
 }
 
 * {
-  margin: 0;
+  margin: 0; 
   padding: 0;
   box-sizing: border-box;
 }
