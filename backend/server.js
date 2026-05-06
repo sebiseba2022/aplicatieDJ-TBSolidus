@@ -15,6 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use('/api', songRoutes);
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'Carousel Party DJ Backend API', status: 'running', apiDocs: 'Use /api/songs endpoint' });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'Server is running' });

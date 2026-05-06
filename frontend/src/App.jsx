@@ -8,15 +8,18 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <nav style={styles.navbar}>
-          <div style={styles.navContainer}>
-            <h2 style={styles.logo}>🎶 Carousel Party DJ</h2>
-            <ul style={styles.navLinks}>
+        <nav className="navbar">
+          <div className="nav-container">
+            <Link to="/user" className="logo-link">
+              <img src="/logo-solidus.png" alt="Solidus Logo" className="logo-image" />
+              <span className="brand-name">Carousel Party</span>
+            </Link>
+            <ul className="nav-links">
               <li>
-                <Link to="/user" style={styles.link}>User Page</Link>
+                <Link to="/user" className="nav-link">Sugestii</Link>
               </li>
               <li>
-                <Link to="/dj" style={styles.link}>DJ Control</Link>
+                <Link to="/dj" className="nav-link">DJ Control</Link>
               </li>
             </ul>
           </div>
@@ -31,40 +34,5 @@ function App() {
     </Router>
   );
 }
-
-const styles = {
-  navbar: {
-    backgroundColor: '#333',
-    padding: '10px 0',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-    marginBottom: '20px',
-  },
-  navContainer: {
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '0 20px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  logo: {
-    color: 'white',
-    margin: 0,
-  },
-  navLinks: {
-    display: 'flex',
-    listStyle: 'none',
-    gap: '30px',
-    margin: 0,
-    padding: 0,
-  },
-  link: {
-    color: 'white',
-    textDecoration: 'none',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    transition: 'color 0.3s',
-  },
-};
 
 export default App;

@@ -7,7 +7,7 @@ router.get('/songs', async (req, res) => {
   try {
     const connection = await pool.getConnection();
     const [songs] = await connection.query(
-      'SELECT * FROM songs WHERE active = 1 ORDER BY likecount DESC LIMIT 50'
+      'SELECT id, NAME as name, active, likecount, dislikecount, created_at, updated_at FROM songs WHERE active = 1 ORDER BY likecount DESC LIMIT 50'
     );
     connection.release();
     res.json(songs);
@@ -22,7 +22,7 @@ router.get('/songs/all', async (req, res) => {
   try {
     const connection = await pool.getConnection();
     const [songs] = await connection.query(
-      'SELECT * FROM songs ORDER BY likecount DESC'
+      'SELECT id, NAME as name, active, likecount, dislikecount, created_at, updated_at FROM songs ORDER BY likecount DESC'
     );
     connection.release();
     res.json(songs);
@@ -64,7 +64,7 @@ router.put('/songs/:id/like', async (req, res) => {
       'UPDATE songs SET likecount = likecount + 1 WHERE id = ?',
       [id]
     );
-    const [songs] = await connection.query('SELECT * FROM songs WHERE id = ?', [id]);
+    const [songs] = await connection.query('SELECT id, NAME as name, active, likecount, dislikecount, created_at, updated_at FROM songs WHERE id = ?', [id]);
     connection.release();
     
     if (songs.length === 0) {
@@ -88,7 +88,7 @@ router.put('/songs/:id/dislike', async (req, res) => {
       'UPDATE songs SET dislikecount = dislikecount + 1 WHERE id = ?',
       [id]
     );
-    const [songs] = await connection.query('SELECT * FROM songs WHERE id = ?', [id]);
+    const [songs] = await connection.query('SELECT id, NAME as name, active, likecount, dislikecount, created_at, updated_at FROM songs WHERE id = ?', [id]);
     connection.release();
     
     if (songs.length === 0) {
@@ -112,7 +112,7 @@ router.put('/songs/:id/move-used', async (req, res) => {
       'UPDATE songs SET active = 0 WHERE id = ?',
       [id]
     );
-    const [songs] = await connection.query('SELECT * FROM songs WHERE id = ?', [id]);
+    const [songs] = await connection.query('SELECT id, NAME as name, active, likecount, dislikecount, created_at, updated_at FROM songs WHERE id = ?', [id]);
     connection.release();
     
     if (songs.length === 0) {
